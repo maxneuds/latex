@@ -1,0 +1,36 @@
+\documentclass[fleqn,twocolumn,a4paper]{article}
+% code <- needs to be first, only use when adding code blocks
+% \usepackage{minted}
+% style
+\input{conf/arxiv-expose.tex}
+
+%%%                  %%%
+% document information %
+%%%                  %%%
+
+\title{Titel}
+\author{
+  Maximilian Neudert\\
+  Fachbereich Informatik\\
+  Hochschule Darmstadt
+}
+
+%%%      %%%
+% document %
+%%%       %%
+
+\begin{document}
+\head
+
+% content
+\input{ins/content.tex}
+
+% bib
+\nocite{*}
+\printbibliography
+
+% gloassaries
+\clearpage
+\printglossary[type=\acronymtype]
+
+\end{document}

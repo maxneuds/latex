@@ -1,0 +1,54 @@
+\documentclass[fleqn,a4paper]{article}
+% code <- needs to be first, only use when adding code blocks
+% \usepackage{minted}
+% style
+\input{conf/arxiv-paper.tex}
+
+%%%                  %%%
+% document information %
+%%%                  %%%
+
+\title{Title}
+\author
+  {\textbf{Author One}\\
+  Divison\\
+  Company
+  \and
+  \textbf{Author Two}\\
+  Divison\\
+  Company
+}
+
+%%%      %%%
+% document %
+%%%       %%
+
+\begin{document}
+% title
+\maketitle
+
+% abstract
+\input{ins/abstract.tex}
+
+% toc
+\clearpage
+\tableofcontents
+
+% content
+\clearpage
+\input{ins/00_intro.tex}
+
+% gloassaries
+\clearpage
+\printglossary[type=\acronymtype]
+
+% bib
+\clearpage
+\nocite{*}
+\printbibliography
+
+% appendix
+% \clearpage
+% \input{ins/appendix.tex}
+
+\end{document}

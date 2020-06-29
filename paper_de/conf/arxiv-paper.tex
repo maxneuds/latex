@@ -1,0 +1,75 @@
+% style
+\usepackage{conf/arxiv-paper}
+
+% language settings
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage[T1]{fontenc}
+
+% glossaries
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\newcommand{\ac}[1]{\acrshort{#1}}
+\newcommand{\aclong}[1]{\acrlong{#1}}
+\newcommand{\acfull}[1]{\acrfull{#1}}
+
+% package tools
+\usepackage{etoolbox}
+\usepackage{xpatch}
+
+% style
+\usepackage{newpxtext,newpxmath}
+\usepackage[final]{microtype}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{color}
+\usepackage{bookmark}
+
+% tables
+\usepackage{booktabs}
+
+% figures
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{./res/}}
+
+% lists
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
+% references
+\usepackage[
+  backend=biber,
+  style=numeric-comp,
+  citestyle=numeric
+]{biblatex}
+\bibliography{bib/ref}
+% allow an additional line-breaking pass by given size
+\emergencystretch=1em
+
+% Math
+\usepackage{ntheorem}
+\usepackage{dsfont}
+\usepackage{nicefrac}
+\setlength{\mathindent}{3em}
+\usepackage{mathtools}
+
+% lists
+\setenumerate{label=(\arabic*),itemsep=3pt,topsep=3pt}
+
+% indentions
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+
+% arxiv settings
+\setcounter{tocdepth}{2}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+% commands
+\input{conf/maxmath.tex}
+
+% acronyms
+\input{conf/acronyms.tex}
